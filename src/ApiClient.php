@@ -42,7 +42,7 @@ class ApiClient implements ApiInterface
      *
      * @throws Exception
      */
-    public function __construct($userId, $secret, TokenStorageInterface $tokenStorage = null)
+    public function __construct($userId, $secret, TokenStorageInterface $tokenStorage = null, $apiUrl = false)
     {
         if ($tokenStorage === null) {
             $tokenStorage = new FileStorage();
@@ -56,6 +56,10 @@ class ApiClient implements ApiInterface
         $this->tokenStorage = $tokenStorage;
         $hashName = md5($userId . '::' . $secret);
 
+        if ($apiUrl) {
+            $this->apiUrl = $apiUrl;
+        }
+        
         /** load token from storage */
         $this->token = $this->tokenStorage->get($hashName);
 
