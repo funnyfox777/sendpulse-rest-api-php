@@ -1,5 +1,5 @@
 {
-  "name": "sendpulse/rest-api-php",
+  "name": "envybox-sendpulse/rest-api",
   "description": "Sendpulse REST API client library",
   "keywords": [
     "sendpulse",
