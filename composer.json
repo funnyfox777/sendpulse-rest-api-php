@@ -1,5 +1,5 @@
 {
-  "name": "sendpulse/rest-api",
+  "name": "sendpulse/rest-api-php",
   "description": "Sendpulse REST API client library",
   "keywords": [
     "sendpulse",
